@@ -7,7 +7,7 @@
 //  List your technical skills by creating an Array of String values and store it in a variable named skills
   const skills = ["Myspace HTML", "Digital Logos", "Instagram Curator", "Professional Mario Kart Racer"];
 // Using "DOM Selection", select the #skills section by id and store it in a variable named skillsSection
-  const skillsSection = document.querySelector("body > section:nth-child(4)");
+  const skillsSection = document.querySelector("body > section:nth-child(4)")
 //  Using "DOM Selection", select the "leave_message" form by name attribute and store it in a variable named messageForm
  const messageForm = document.querySelector("body > section:nth-child(6) > form");
 
@@ -26,7 +26,7 @@
  // On the next line, append the skill element to the skillsList element
  for (let i = 0; i < skills.length; i++) {
     let skill = document.createElement('li');
-    skill.innerHTML = skills[i];
+    skill.innerText = skills[i];
     skillsList.appendChild(skill);
   } 
 
@@ -65,7 +65,7 @@ removeButton.type = "button";
 // Inside the callback function, find the button's parent element using DOM Traversal (hint: parentNode property) and store it in a variable named entry
 // Remove the entry element from the DOM (hint: remove method)
 removeButton.addEventListener("click", function(){ 
- let entry = document.getElementById("button").parentNode.nodeName;
+ let entry = removeButton.parentNode;
  entry.remove()
 });    
 

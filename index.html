@@ -6,48 +6,63 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Samantha Title Page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
     <section>
-    Samantha Escobar
+    <h1>Samantha Escobar</h1>
     </section>
     <section>
     <h1>About</h1>
     <p>I am a full-time server and full-time senior in college. I am studying psychology as an undergrad and coding in my personal time. I have a dog name Bellatrix lestrange and a dwarf hamster named Fuzzy Twinkle. I like to most crafts and art mediums. I create logos and doodles for friends' businesses using digital design. 
     </p>
     </section>
-    <section>
+
+    <section class="experience">
     <h2>Experience</h2>
-    <p>Girls who code: summer bootcamp 2019</p>
+
+  </ul style="list-style-type:disc">
+    <li class="experience-one">Breakthrough Tech: Summer Guild 2019</li>
+    <li class="experience-two">Freelance Myspace Page Formatting</li>
+  </ul>
+
   </section>
+
   <section>
     <h2>Skills</h2>
-    <ul></ul>
+    <ul class ="skills"></ul>
   </section>
+
   <section>
     <h2>Connect</h2>
     <p>https://github.com/Samdeplume</p>
   </section>
+
+  
   <section>
     <h2>Leave a Message</h2>
     <form action="example.com/path" method="post" name="leave_message">
-      <label for="name">Name:</label><br>
-      <input type="text" name="name" required=true><br>
 
-      <label for="email">Email Address:</label><br>
-      <input type="email" name="email" required=true><br>
-
-      <textarea name="message" required = true></textarea><br>
-
-      <button tpe="submit">Submit</button><br>
+      <label class="message-label" for="name">Name:</label><br>
+      <input class="message-input" type="text" name="name" required=true><br>
+   
+      <label class="message-label" for="email">Email Address:</label><br>
+      <input class="message-input" type="email" name="email" required=true><br>
+    
+      <textarea class="message-input" name="message" required = true></textarea><br>
+    
+      <button class="submit" type="submit">Submit</button><br>
+    
     </form>
 
   </section>
-  <section id="messages">
+</div>
+
+  <section class="messages" id="messages">
     <h2>Messages</h2>
     <ul></ul>
   </section>
-  <footer></footer>
+  <footer class="footer"></footer>
    <script src="js/index.js"></script>
   </body>
 </html>
