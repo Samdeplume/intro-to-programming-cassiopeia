@@ -7,9 +7,9 @@
 //  List your technical skills by creating an Array of String values and store it in a variable named skills
   const skills = ["Myspace HTML", "Digital Logos", "Instagram Curator", "Professional Mario Kart Racer"];
 // Using "DOM Selection", select the #skills section by id and store it in a variable named skillsSection
-  const skillsSection = document.querySelector("body > section:nth-child(4)")
+  const skillsSection = document.querySelector("#skillsSection")
 //  Using "DOM Selection", select the "leave_message" form by name attribute and store it in a variable named messageForm
- const messageForm = document.querySelector("body > section:nth-child(6) > form");
+ const messageForm = document.querySelector("body > section:nth-child(7) > form")
 
 // Create a new paragraph (p) element and store it in a variable named copyright
  let copyright = document.createElement('p');
@@ -19,7 +19,7 @@
  footer.appendChild(copyright);
 
  // Using "DOM Selection", query the skillsSection (instead of the entire document) to find the <ul> element and store it in a variable named skillsList
- const skillsList = document.querySelector("body > section:nth-child(4) > ul")
+ const skillsList = document.querySelector("#skillsSection > ul")
  // Create a for loop to iterate over your skills Array, starting at index 0
  // Inside the loop, create a new list item (li) element and store it in a variable named skill
  // On the next line, set the inner text of your skill variable to the value of the current Array element 
@@ -76,5 +76,24 @@ messageList.appendChild(newMessage);
 
  messageForm.reset()  
   }
+
+  // sticky navbar code
+  // When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var navbar = document.getElementById("myNavBar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
 
 

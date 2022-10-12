@@ -19,8 +19,7 @@ h2 {
     font-size: 30px;
     font-weight: bold;
 }
-.experience-one,
-.experience-two {
+.experienceType {
     border: 3px dotted;
     border-color: #536d6c;
     margin: 5px;
@@ -61,4 +60,52 @@ h2 {
 .footer {
    margin: 10px;
    background-color:#7c9a92; 
+}
+.nav-link {
+color: #c7d3bf;
+}
+/* for sticky navbar*/
+/* Style the navbar*/
+.myNavBar {
+    padding: 10px 16px;
+    background: #555;
+    color: #f1f1f1;
+  }
+  
+  /* Page content */
+  .content {
+    padding: 16px;
+  }
+  
+  /* The sticky class is added to the header with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 102px;
+  }
+
+  /* for experience grid */
+  .flex-grid {
+    display: flex;
+  }
+  .col {
+    flex: 1;
+  }
+
+  /* flexbox for message form */
+  .flex-outer li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-outer > li > label,
+.flex-outer li p {
+  flex: 1 0 120px;
+  max-width: 220px;
 }
