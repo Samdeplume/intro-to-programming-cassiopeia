@@ -103,23 +103,40 @@ function myFunction() {
 // 1. method: the method of your request (in this case, "GET")
 // 2. url: the url of your request (in this case, "https://api.github.com/users/{GITHUB_USERNAME}/repos")
 // Finally, call the send method on your githubRequest object to actually send the request
-const gitHubRequest = new XMLHttpRequest();
-gitHubRequest.addEventListener("load", handleResponse)
-gitHubRequest.open("GET", "https://api.github.com/users/Samdeplume/repos");
-gitHubRequest.send();
+// const gitHubRequest = new XMLHttpRequest();
+// gitHubRequest.addEventListener("load", handleResponse)
+// gitHubRequest.open("GET", "https://api.github.com/users/Samdeplume/repos");
+// gitHubRequest.send();
 
-function handleResponse(){
-  const repositories = JSON.parse(this.response);
-  const repoNames = repositories.map(repo => repo.name);
-// Create a for loop to iterate over your repositories Array, starting at index 0
-for (let i = 0; i < repositories.length; i++) {
-  const project = document.createElement("li");
-  project.innerText = repositories[i].name;
-  projectList.appendChild(project);
-} 
-}
+// function handleResponse(){
+//   const repositories = JSON.parse(this.response);
+//   const repoNames = repositories.map(repo => repo.name);
+// // Create a for loop to iterate over your repositories Array, starting at index 0
+//   for (let i = 0; i < repositories.length; i++) {
+//     const project = document.createElement("li");
+//     project.innerText = repositories[i].name;
+//     projectList.appendChild(project);
+//   } 
+// }
 
 //  Using "DOM Selection", select the #projects section by id and store it in a variable named projectSection
 const projectSection = document.querySelector("#projects")
 //  Using "DOM Selection", query the projectSection (instead of the entire document) to find the <ul> element and store it in a variable named projectList
 const projectList = document.querySelector("#projectList")
+
+// Using the Fetch API, create a "GET" request to the same GitHub API url as before 
+// Chain a then method to your fetch call and pass it a function that returns the response JSON data
+// Chain another then method and pass it a function, inside of which you can paste the code from your previous "load" event listener function
+fetch('https://api.github.com/users/Samdeplume/repos',{
+  method: 'GET'
+})
+  .then((response) => response.json())
+ // .then((data) => console.log(data));
+ .then((repositories) => {
+  const repoNames = repositories.map(repo => repo.name);
+    for (let i = 0; i < repositories.length; i++) {
+      const project = document.createElement("li");
+      project.innerText = repositories[i].name;
+      projectList.appendChild(project);
+    }
+})
