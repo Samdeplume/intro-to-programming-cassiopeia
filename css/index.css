@@ -2,12 +2,37 @@ body {
     background-color: #314448;
     color: #e0dab8;
     font-family: "Didot", Serif;
-    border: 20px solid #c7d3bf;
+   /* border: 20px solid #c7d3bf;*/
 }
+#myName {
+  font-family: "Gabriola", serif;
+  font-size: 80px;
+  width: 800px;
+  padding: 0px;
+  margin: 0px;
+  border: 0;
+ float: right;
+ overflow: hidden;
+  }
+
+  @media screen and (max-width: 500px) {
+    #myName {
+      float: center;
+      display: block;
+      text-align: center;
+      max-width: 100%;
+      font-size:inherit;
+
+  
+    }
+  }
 section {
-padding: 10px;
+/*width: 800px;
+height: 200px; */
+padding: 20px;
 border: 5px solid #c7d3bf;
 margin: 20px;
+
 }
 h1 {
     margin: 5px;
@@ -31,7 +56,10 @@ h2 {
 .skills > li {
     border: 3px dotted;
     border-color: #536d6c;
-    margin: 5px;
+    margin: 10px;
+}
+#replit {
+  color: #e0dab8;
 }
 .message-label {
     font-size: 20px;
@@ -46,20 +74,27 @@ h2 {
     background-color: transparent;
     margin: 5px;
 }
-
-.submit {
+#submitB {
     padding: 5px;  
     border: 3px dotted #536d6c;
     background-color: transparent;
     color:#e0dab8;
 }
-.messages {
+#projectList {
+  padding: 20px;
+  margin: 0px;
+  border: 3px dotted #536d6c;
+}
+.messages1 {
     border:3px outset #c7d3bf;
 
 }
+
 .footer {
+  width: 300px;
+  /*length: 100px;*/
    margin: 10px;
-   background-color:#7c9a92; 
+   /*background-color:#7c9a92;*/
 }
 .nav-link {
 color: #c7d3bf;
@@ -71,7 +106,10 @@ color: #c7d3bf;
     background: #555;
     color: #f1f1f1;
   }
-  
+/* right-align navigation bar */
+.navbar-nav {
+    padding: 5px;
+}
   /* Page content */
   .content {
     padding: 16px;
@@ -97,11 +135,12 @@ color: #c7d3bf;
     flex: 1;
   }
 
-  /* flexbox for message form */
+  /* flexbox for message form 
   .flex-outer li {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  
 }
 
 .flex-outer > li > label,
@@ -109,3 +148,38 @@ color: #c7d3bf;
   flex: 1 0 120px;
   max-width: 220px;
 }
+*/
+
+img {
+  border-radius: 50%;
+}
+.responsive {
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+}
+
+.fa:hover {
+  opacity: 0.9;
+}
+
+.fa-linkedin {
+  background: #536d6c;
+  color: white;
+}
+.fa-github {
+  background: #536d6c;
+  color: white;
+}
+.fa-twitter {
+  background: #536d6c;
+  color: white;
+}
+.fa {
+  padding: 20px;
+  font-size: 40px;
+
+  text-decoration: none;
+  margin: 5px 80px;
+  border-radius: 50%;
+} 
