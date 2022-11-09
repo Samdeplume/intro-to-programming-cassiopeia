@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Samantha Title Page</title>
+    <title>Samantha Escobar</title>
     <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- beginning navigation bar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light" id="myNavBar">
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -16,18 +18,31 @@
       <a class="nav-link" href="#experience">Experience</a>
       <a class="nav-link" href="#skillsSection">Skills</a>
       <a class="nav-link" href="#connect">Connect</a>
-      <a class="nav-link" href="#message">Message</a>
+      <a class="nav-link" href="#messages">Message</a>
                 </div>
               </div>
           </nav>
 <!-- end navigation bar -->
+<!-- <div style = "position:absolute; right: -200px; top:100px; "></div> -->
+   <section> <a href="https://ibb.co/CWvBSjn"><img src="https://i.ibb.co/cxtJsWN/Self.jpg" alt="Photo of self" class="responsive"></a> 
+    
+    <h1 class="myName" id="myName">Samantha Escobar</h1>
+  
+  </section>
+   
+<!-- <section class="myName" id="myName">
+    Samantha Escobar
+    </section> -->
 
-    <section>
-    <h1>Samantha Escobar</h1>
-    </section>
+<!-- <div style = "position:absolute; right:-20px; top:200px; ">
+  <section class="myName" id="myName">
+   Escobar
+   </section>
+</div> -->
+   
     <section class="about" id="about">
     <h1>About</h1>
-    <p>I am a full-time server and full-time senior in college. I am studying psychology as an undergrad and coding in my personal time. I have a dog name Bellatrix lestrange and a dwarf hamster named Fuzzy Twinkle. I like to do most crafts and art mediums. I create logos and doodles for friends' businesses using digital design. 
+    <p>I am a part-time server and full-time senior at The City College of New York University. I am studying psychology as an undergrad and coding in my personal time. I have a dog name Bellatrix lestrange and a dwarf hamster named Fuzzy Twinkle. I like to do most crafts and art mediums. I create logos and doodles for friends' businesses using digital design. 
     </p>
     </section>
 
@@ -37,7 +52,7 @@
 <div class="flex-grid">
   <div class="col"><li class="experienceType">Breakthrough Tech: Summer Guild 2019</li></div>
   <div class="col"><li class="experienceType">Digital Design Art</li></div>
-  <div class="col"> <li class="experienceType">Code The Dream: In Progress</li></div>
+  <div class="col"> <li class="experienceType">Code The Dream: July - Nov 2022</li></div>
 </div>
 
   </section>
@@ -49,26 +64,29 @@
 
   <section id="projects">
     <h2>Projects</h2>
-    <ul id="projectList"></ul>
+    <ul id="projectList">  
+      <li><a id ="replit" href="https://replit.com/@SamDePlume/Homeostasis#index.html">Breakthrough Tech: Summer Guild - Homeostasis</a> </li>
+    </ul>
+  
   </section>
 
   <section id="connect">
     <h2>Connect</h2>
-    <p>https://github.com/Samdeplume</p>
+    <a href="https://github.com/Samdeplume" class="fa fa-github"></a>
+    <a href="https://www.linkedin.com/in/samanthanellyceescobar/" class="fa fa-linkedin"></a>
+    <a href="https://twitter.com/SamDePlume" class="fa fa-twitter"></a>
   </section>
 
   
-  <section id="message">
+  <section>
     <h2>Leave a Message</h2>
-    <form action="example.com/path" method="post" name="leave_message" id ="messageForms">
+    <form name="leave_message">
       
-      <ul class="flex-outer">
+      <!-- <ul class="flex-outer"> </ul> -->
+        <li>
           <label class="message-label" for="name">Name:</label><br>
           <input class="message-input" type="text" name="name" required=true><br>
-      </li>
-        
-      </ul>
-      
+        </li>
 
         <li>
           <label class="message-label" for="email">Email Address:</label><br>
@@ -79,22 +97,20 @@
           <textarea class="message-input" name="message" required = true></textarea><br>
         </li>
         <li>
-          <button class="submit" type="submit" >Submit</button><br>
+          <button class="button" type="submit" id="submitB">Submit</button><br>
       </li>
-        </ul>
     </form>
-
   </section>
-</div>
 
-  <section class="messages" id="messages">
+
+
+  <section class="messages1" id="messages">
     <h2>Messages</h2>
     <ul></ul>
   </section>
-  <footer class="footer"></footer>
+  <footer class="footer">
+  </footer>
+
    <script src="js/index.js"></script>
-   
-
-
   </body>
 </html>

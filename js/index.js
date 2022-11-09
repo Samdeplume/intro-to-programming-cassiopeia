@@ -9,7 +9,7 @@
 // Using "DOM Selection", select the #skills section by id and store it in a variable named skillsSection
   const skillsSection = document.querySelector("#skillsSection")
 //  Using "DOM Selection", select the "leave_message" form by name attribute and store it in a variable named messageForm
-  let messageForm = document.querySelector("#messageForms")
+  const messageForm = document.querySelector('[name = leave_message]');
 
 // Create a new paragraph (p) element and store it in a variable named copyright
  let copyright = document.createElement('p');
@@ -35,26 +35,24 @@
 // Inside the callback function for your event listener, add a console.log statement to log the three variables you created in the previous step
 // Inside the callback function, above the other code you just wrote, add a new line to prevent the default refreshing behavior of the "submit" event  
 // Inside the callback function, on the very last line, add a new line of code to clear the form  
-  messageForm.addEventListener("submit", myFunction);
-  function myFunction(){
-    event.preventDefault();
-    let name = event.target.name.value
-    let email = event.target.email.value
-    let message = event.target.message.value
+  messageForm.addEventListener("submit", function(event){
+  event.preventDefault();
+    const name = event.target.name.value;
+    const email = event.target.email.value;
+    const message = event.target.message.value;
     console.log(name)
     console.log(email)
     console.log(message)
 // Using "DOM Selection", select the #messages section by id and store it in a variable named messageSection
     const messageSection = document.querySelector("#messages")
 // Using "DOM Selection", query the messageSection (instead of the entire document) to find the <ul> element and store it in a variable named messageList
-    const messageList = document.querySelector("#messages > ul")
+    const messageList = messageSection.querySelector("ul")
 //  Create a new list item (li) element and store it in a variable named newMessage
-let newMessage = document.createElement("li");
+  const newMessage = document.createElement("li");
 // On the next line, set the inner HTML of your newMessage element with the following information:
-
-// <a> element that displays the "name" and links to the "email" (hint: use the mailto: prefix)
-// <span> element that displays the "message"
- newMessage.innerHTML = `<a href="mailto:${email}"> ${name} </a> <span>${message}</span>`
+  // <a> element that displays the "name" and links to the "email" (hint: use the mailto: prefix)
+  // <span> element that displays the "message"
+ newMessage.innerHTML = `<a href="mailto:${email}"> ${name} </a> <span> wrote: ${message}</span>`
 // Create a new <button> element and store it in a variable named removeButton
 const removeButton = document.createElement("button");
 // Set the inner text to "remove"
@@ -67,19 +65,24 @@ removeButton.type = "button";
 removeButton.addEventListener("click", function(){ 
  let entry = removeButton.parentNode;
  entry.remove()
-});    
+});   
+
+ // if there are no messages
+//  if (messageSection.style.display === 'none') {
+//   messageSection.style.display = 'block'
+// }
 
 // Append the removeButton to the newMessage element 
 newMessage.appendChild(removeButton);
 //  Append the newMessage to the messageList element
 messageList.appendChild(newMessage);
-
- messageForm.reset()  
-  }
+//  Inside the callback function, on the very last line, add a new line of code to clear the form 
+ messageForm.reset();
+  });
 
   // sticky navbar code
   // When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {myFunction()}
 
 // Get the header
 var navbar = document.getElementById("myNavBar");
